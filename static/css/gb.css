@@ -1,0 +1,81 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+ {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #181818;
+}
+.abc
+{
+    width: 265px;
+    height: 215px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.abc::before
+{
+    content: "";
+    background-image: conic-gradient(
+        #00ff00 120deg,
+        transparent 20deg
+    );
+    width: 250%;
+    height: 200%;
+    position: absolute;
+    animation: rotate 4s linear infinite;
+}
+.abc::after
+{
+    content: "TonyTech1220";
+    width: 250px;
+    height: 200px;
+    background: #101010;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #09ff00;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+    animation: color 4s linear infinite;
+}
+@keyframes rotate 
+{
+    0%{
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+
+    }
+    
+
+    100%{
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes color
+
+{
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
